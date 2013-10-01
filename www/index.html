@@ -1,0 +1,391 @@
+
+
+
+<!doctype html>
+	<head> 
+		<meta charset="utf-8">
+
+		<title>AA - Proto.io</title>   
+
+			<meta name="HandheldFriendly" content="True">
+			<meta name="MobileOptimized" content="720"> <meta name="viewport" content="width=device-width, minimum-scale=1.00, maximum-scale=1.00, initial-scale=1.00, user-scalable=no, target-densitydpi=device-dpi" /> 
+
+			<meta name="format-detection" content="telephone=no">
+			
+			
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/branding/apple-touch-icon-retina.png"> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/branding/apple-touch-icon-ipad.png"/> <link rel="apple-touch-icon-precomposed" href="./assets/branding/apple-touch-icon.png"/> <link rel="shortcut icon" href="./assets/branding/apple-touch-icon.png"> 
+			<style>
+				body * {-webkit-text-size-adjust: 100%;}
+			</style>
+		<link rel="stylesheet" href="./stylesheets/jquery.mobile-1.2.0.min.css" /> <link rel="stylesheet" href="./stylesheets/jquery.mobile.custom.css" /> 
+
+		<meta http-equiv="cleartype" content="on"> 
+		
+		
+		
+			<link rel="stylesheet" href="./stylesheets/style.css" />
+			<script type="text/javascript" src="./scripts/modernizr-2.0.6.min.js"></script>
+					
+				<script src="./scripts/jquery-1.8.3.min.js"></script>
+				<script type="text/javascript" src="./scripts/TweenMax.min.js"></script> 
+				<script type="text/javascript" src="./scripts/jquery.json-2.2.min.js"></script> 
+				<script type="text/javascript" src="./scripts/iscroll.js"></script>
+				<script type="text/javascript" src="./scripts/jquery-ui-1.9.1.draggable.min.js"></script>
+				<script type="text/javascript" src="./scripts/cssGenerator.js"></script>
+				<link rel="stylesheet" href="./stylesheets/player2.css" />
+				
+				<script type="text/javascript" src="./scripts/jquery.ui.ipad.altfix.js"></script>
+				
+				<script type="text/javascript" src="./scripts/player2.min.js"></script>		
+				
+				<link type="text/css" href="./libraries/common/components.css" rel="Stylesheet" /> 	
+				<script type="text/javascript" src="./libraries/common/components.js"></script> 
+				
+				
+						<link type="text/css" href="./libraries/android/components.css" rel="Stylesheet" /> 	
+						<script type="text/javascript" src="./libraries/android/components.js"></script> 
+					
+						<link type="text/css" href="./libraries/icons/components.css" rel="Stylesheet" /> 	
+						<script type="text/javascript" src="./libraries/icons/components.js"></script> 
+					
+
+				<script type="text/javascript" src="./data/data.js"></script> 	
+				
+				<script src="./scripts/jquery.mobile-1.2.0.min.js"></script>
+				<script type="text/javascript" src="./scripts/swipeupdown.js"></script>
+				<script src="./scripts/jquery.mobile.custom.js"></script>
+				<script type="text/javascript" src="./scripts/jquery.transit.js"></script>
+					
+		<style>
+			
+			
+			
+			body .ui-page {-webkit-transform:translate3d(0,0,0);} /* FIX JQUERYMOBILE TRANSITION FLICKER BUG */
+			
+			.ui-page { -webkit-backface-visibility: hidden; } /* FIX JQUERYMOBILE TRANSITION FLICKER BUG */
+			
+			.landscape, .landscape .ui-page {
+				min-height: 720px;
+			}
+			
+			.portrait, .portrait .ui-page {
+				min-height: 1280px;
+			}
+
+			/* MAKE CLICK AREA TRANSPARENT */
+			.type-actionarea .inner-rec div {
+				background: none;
+			}
+			
+			.type-actionarea .inner-rec div:before {
+				display: none;
+			}
+			
+			.type-animationtarget {
+				opacity: 0!important;
+				pointer-events: none;
+			}
+			
+			html {
+				background: transparent;
+			}
+			
+			
+			
+			#dragarea { background: transparent; }
+			
+			.hide { display: none!important; }
+			
+			.ui-body-c {
+				background: none;
+			}
+			
+			* {
+				outline: none;
+			}
+			
+						
+			
+				#loader {
+					background-image: url(images/editor/loader.gif);
+				}
+			
+		</style>
+		
+			<script type="text/javascript">
+				var _orientation = window.innerWidth>window.innerHeight?"landscape":"portrait";
+
+				
+				
+					var sLinkedAssets = [];
+					
+				
+
+				
+				
+
+				prx.url['account'] = 'https://superbia.proto.io';
+				prx.url['staticassets'] = 'https://s3.amazonaws.com/gallery.proto.io';
+				
+				
+				
+					prx.device = 'default';
+				
+				
+				prx.device_library = 'android';				
+				prx.devices[prx.device] = {
+						name: prx.device
+						,caption: "Nexus"
+						,defaultOrientation: 'portrait'
+						,portrait_applies: 1 //new
+						,portrait: [720,1280]
+						,landscape_applies: 1 //new
+						,landscape: [1280,720]
+						,allow_orientation_change: 1 //new
+						,statusbar_skin: 'default' // new
+						,statusbarheightportrait: 0
+						,statusbarheightlandscape: 0	
+						,navigationbar_skin: 'default' //new
+						,navigationbarheightportrait: 0
+						,navigationbarheightlandscape: 0	
+						
+						,normalportrait: [720,1280]
+						,normallandscape: [1280,720]
+						//,device_uuid: ['c4b88941-7841-4a66-9c20-4672733d1473']
+						,device_uuid: 'c4b88941-7841-4a66-9c20-4672733d1473'
+										
+				}
+		
+				//log(prx.devices);
+				
+				prx.mobilebrowser = false;
+				
+
+				prx.embed = 0;
+
+
+				
+				
+				
+		
+				
+				$(document).bind("mobileinit", function(){
+				  $.mobile.allowCrossDomainPages = true;
+				  $.mobile.defaultHomeScroll = 0;
+				  $.mobile.ajaxEnabled = false;
+				  $.mobile.touchOverflowEnabled = true;
+				  $.mobile.defaultPageTransition = 'none';
+				  $.mobile.defaultDialogTransition = 'none';
+				  
+				  /*
+				  $.extend($.mobile, {
+					
+				  });
+				  */
+				});
+
+
+				
+				prx.filename = 'a1c08871-36bc-4339-bd47-ed24c65352b1';
+				prx.ron = '0'; // Reviewers LIVE PREVIEW is ON
+				prx.url.devices = 'https://static.proto.io/devices';
+				prx.save = 'false'; 
+		
+				prx.statusbar = '0';
+				prx.statusbarapplies = '0';		
+		
+				prx.navigationbar = '0';
+				prx.navigationbarapplies = '0';
+				
+				
+				prx.url.static = 'https://static.proto.io';
+				prx.vup = '1';
+				
+					prx.v = '0';				
+				
+				prx.rl = '1'; 
+				prx.s3b = 'superbia-44242-proto';
+				prx.projectid = 'a1c08871-36bc-4339-bd47-ed24c65352b1';
+				prx.initialpageid = false;
+				prx.deviceorientation = 'portrait';
+				prx.export2html = '1';
+				
+				 
+							
+					function getAssetUrl(asset) {
+						var assetType = asset.assetType;
+						var url = asset.url;
+						
+						if (typeof(asset.targetSrc) != "undefined") {
+							url =  './assets/' + asset.targetSrc;	
+						} else {
+							url =  './assets/' + url;
+						}
+						
+						//linked assets
+						if (asset.assetType == "project") {
+							if (typeof(sLinkedAssets["pa1c08871-36bc-4339-bd47-ed24c65352b1_"+asset.fileId]) != "undefined") {	
+								url = sLinkedAssets["pa1c08871-36bc-4339-bd47-ed24c65352b1_"+asset.fileId];
+							}
+						}
+						
+						if (asset.assetType == "account") {
+							if (typeof(sLinkedAssets["p_"+asset.fileId]) != "undefined") {	
+								url = sLinkedAssets["p_"+asset.fileId];
+							}
+						}
+						
+						return url;
+					}
+				
+				
+				
+				
+				
+				document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);	
+
+				$(document).ready(function(){
+
+					
+					
+					
+					
+					
+					
+					try {
+						if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad|android/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+							//prx.mobilebrowser = true;
+							_agents = navigator.userAgent.toLowerCase().match(/(android)/g); // Android					
+							if (!_agents) {
+								//document.write("<style>.box { -webkit-backface-visibility: hidden; }</style>");
+								$('body').prepend("<style>.box { -webkit-backface-visibility: hidden; }</style>");
+							}
+						}
+					} catch(err) {}
+
+					 
+					
+					
+							
+					$("[data-role=page]").focus(function(){ return false;}); // Fix for jQuery Mobile push to top on transition
+							
+			 		var _deviceOrientation = ($(window).width() < $(window).height()) ? "portrait" : "landscape";
+	
+					
+					// STATUSBAR = TOP BAR
+					if (prx.statusbarapplies) {
+						prx.allowstatusbar = true;
+					} else {
+						prx.allowstatusbar = false;										
+					}
+					
+					
+					if (prx.allowstatusbar) {
+						// CHECK STATUSBAR ON IOS
+						var _agents = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/g); // iOS
+						if (_agents) {
+							var _standalone = window.navigator.standalone ? true:false;
+							if(_standalone) {
+								prx.allowstatusbar = false;
+							} else {
+						 		
+						 		
+						 		// if not fullscreen then disable statusbar
+						 		if(!($(window).width() == prx.devices[prx.device][_deviceOrientation][0] && $(window).height() == prx.devices[prx.device][_deviceOrientation][1])) {
+									prx.allowstatusbar = false;
+						 		}
+						 	}
+						}
+
+						// CHECK STATUSBAR ON ANDROID
+						try {
+							_agents = navigator.userAgent.toLowerCase().match(/(android)/g); // Android					
+							if (_agents) {
+								// if not fullscreen then disable statusbar						
+						 		if(!($(window).width() == prx.devices[prx.device][_deviceOrientation][0] && $(window).height() == prx.devices[prx.device][_deviceOrientation][1])) {
+									prx.allowstatusbar = false;
+						 		}
+							}
+						} catch(err) {alert(err)}
+					}
+					
+
+					
+					// NAVIGATION BAR = BOTTOM BAR
+					if (prx.navigationbarapplies) {
+						prx.allownavigationbar = true;
+					} else {
+						prx.allownavigationbar = false;										
+					}
+					
+							
+					var _agents = navigator.userAgent.toLowerCase().match(/(android)/g);
+					if (_agents) {
+						try {
+							if(!($(window).width() == prx.devices[prx.device][_deviceOrientation][0] && $(window).height() == prx.devices[prx.device][_deviceOrientation][1])) {
+								prx.allownavigationbar = false;
+					 		} 
+				 		} catch(err) {alert(err)}
+					}
+					
+					
+					
+					
+					$('#dragarea').css('width',$(window).width()+'px');
+					$('#dragarea').css('height',$(window).height()+'px');		
+					
+					$(window).resize(function() {
+						$('#dragarea').css('width',$(window).width()+'px');
+						$('#dragarea').css('height',$(window).height()+'px');		
+					})
+					
+
+										
+					
+					 
+					if (typeof(prx.xdata) != "undefined") { 
+						prx.xdata = $.toJSON(prx.xdata);
+					}
+					
+					prx.s3Links = {};
+					
+					prx.loadProject(prx.filename);
+					
+					//$('html').removeClass('min-width-320px min-width-480px min-width-768px min-width-768px min-width-1024px min-width-1024px');
+	
+					
+						MBP.hideUrlBar();
+					
+					
+					
+
+					
+					
+					
+				});	
+			</script>
+		
+	</head>
+	
+	<body oncontextmenu="return false;" class="player" style="overflow: hidden; width: 720px; height: 1280px;" id="mbd">
+
+		<div id="dragarea" style="display:none;"></div>
+		<div id="statusbar"></div>
+		<div data-role="page" id="p-1" data-id="1"></div> <div data-role="page" id="p-4" data-id="4"></div> <div data-role="page" id="p-5" data-id="5"></div> <div data-role="page" id="p-6" data-id="6"></div> <div data-role="page" id="p-7" data-id="7"></div> 
+		<div id="navigationbar"></div>
+		
+		
+		<div id="overlay" style="position: absolute; top:0px;left:0px;"></div> <div id="trash" style="position: absolute; left:0px; display: none;"></div>
+
+		<div id="loader-wrapper">
+			<div id="loader">
+				<span>Loading...</span>
+			</div>
+		</div>
+
+		
+				<script type="text/javascript" src="./scripts/helper.js"></script>
+			
+
+	</body>	
+</html> 

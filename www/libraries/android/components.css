@@ -1,0 +1,371 @@
+/********************************************************************************************/
+/********************************************************************************************/
+/*******************************             ANDROID           ******************************/
+/********************************************************************************************/
+/********************************************************************************************/
+
+/* DRAG AREA */
+#dragarea {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	border: 0px solid #EEEEEE;
+	background-color: #FFF;
+}
+
+
+/* TYPE = ACTIONBAR */
+.type-android-actionbar .actionbar-inner {
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-actionbar .actionbar-inner.showActionOverflow {
+	position: relative; padding-right: 10%;
+}
+
+.type-android-actionbar .actionbar-inner.showActionOverflow .actionOverflow {
+	position: absolute; right: 0; height: 100%; width: 10%; text-align: center;
+}
+
+.type-android-actionbar .actionbar-inner.showActionOverflow .actionOverflow .AO {
+	position: absolute; right: 42%; margin: 0 auto;
+}
+
+.type-android-actionbar .actionbar-inner.showActionOverflow .actionOverflow .AO1 {
+	top: 25%;
+}
+.type-android-actionbar .actionbar-inner.showActionOverflow .actionOverflow .AO2 {
+	top: 45%;
+}
+.type-android-actionbar .actionbar-inner.showActionOverflow .actionOverflow .AO3 {
+	top: 66%;
+}
+
+.type-android-actionbar .left-icon {
+	display: inline-block; height: 100%;
+	position: relative;
+}
+
+.type-android-actionbar .left-icon img {
+	vertical-align: middle;	 padding: 0 10px 0 0;
+}
+
+
+.type-android-actionbar .caption {
+	display: inline-block; height: 100%; padding: 0 10px;
+}
+
+/* TYPE = TABBAR */
+.type-android-fixed-tabbar ul {
+	width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0;
+}
+
+.type-android-fixed-tabbar ul li {
+	float: left; height: 100%; list-style: none;
+	position: relative;
+}
+
+.type-android-fixed-tabbar ul li input {
+	display: none;	
+}
+
+.type-android-fixed-tabbar ul li label {
+	text-align: center; width: 100%; height: 100%; display: inline-block;
+	position: relative;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-fixed-tabbar ul li label:before {
+	content: " ";
+	display: inline-block; width: 100%; height: 1px; position: absolute; bottom: 0; left: 0;	
+}
+
+.type-android-fixed-tabbar ul li label:after {
+	content: " ";
+	display: inline-block; width: 1px; height: 50%; position: absolute; top: 25%; left: 0;	
+}
+
+.type-android-fixed-tabbar ul li:first-child label:after {
+	display: none;	
+}
+
+/* TYPE = SCROLLABLE TABBAR */
+
+.type-android-scrollable-tabbar .scrollable-tabbar-inner {
+	overflow: hidden; height: 100%; position: relative;
+}
+
+.type-android-scrollable-tabbar .scrollable-tabbar-inner:before {
+	content: " ";
+	position: absolute; top: 0; left: 0; pointer-events: none;
+	display: inline-block; height: 100%; width: 40px;	
+}
+
+.type-android-scrollable-tabbar .scrollable-tabbar-inner:after {
+	content: " ";
+	position: absolute; top: 0; right: 0; pointer-events: none;
+	display: inline-block; height: 100%; width: 40px;	
+}
+
+.type-android-scrollable-tabbar .scrollable-tabbar-container {
+	list-style: none; margin: 0; padding: 0;
+	width: 9999px;
+	o!verflow: hidden;
+}
+
+.type-android-scrollable-tabbar .scrollable-tabbar-container li {
+	float: left;	
+	text-align: center;
+}
+
+/* TYPE = SPINNER */
+.type-android-spinner {
+	display: table;
+}
+
+.type-android-spinner .inner{
+	display: table-cell; position: relative;
+	vertical-align: middle;
+}
+
+.type-android-spinner .toggler {
+	width: 0px; height: 0px;
+	border-style: solid;
+	border-top-color: transparent!important;
+	border-left-color: transparent!important;
+	position: absolute; right: 0; bottom: 0;
+}
+
+/* TYPE = DROPDOWN */
+.type-android-dropdown ul {
+	margin: 0; padding: 0; list-style: none;
+}
+.type-android-dropdown ul li {
+	position: relative;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-dropdown ul li:last-child {
+	border-bottom: 0 none!important;
+}
+
+.type-android-dropdown ul li input {
+	display: none;
+}
+
+.type-android-dropdown ul li label {
+	display: block; height: 100%;
+}
+
+.type-android-dropdown .caption {
+	display: inline-block; padding: 0 20px;
+}
+
+.type-android-dropdown .icon[style*='float: left'] + .caption {
+	padding-left: 0;	
+}
+
+.type-android-dropdown .icon {
+	display: inline-block; height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 0 10px;
+}
+
+
+/* TYPE = BUTTON */
+.type-android-button .button {
+	text-align: center;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+/***** FORM COMPONENTS *****/
+/* TYPE = LABEL */
+.type-android-label .inner {
+	height: 100%; padding: 0 8px;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* TYPE = TEXTFIELD */
+.type-android-textfield input, .type-android-textfield .faux-input {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	height: 100%; width: 100%;
+	border: medium none; background: transparent;
+	padding: 0 10px;
+	outline: none!important;
+	box-shadow: none!important;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+}
+
+.type-android-textfield input:focus {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.type-android-textfield .left-edge {
+	display: inline-block; height: 20%; position: absolute; bottom: 0; left: 0;
+}
+
+.type-android-textfield .right-edge {
+	display: inline-block; height: 20%; position: absolute; bottom: 0; right: 0;
+}
+
+.type-android-textfield .faux-input:empty, .type-android-textfield .faux-input.placeholder-input {
+	display: none;
+}
+
+.type-android-textfield .faux-input:empty + .faux-input.placeholder-input {
+	display: block;
+}
+
+.type-android-textfield.box.current-component [data-editableProperty] textarea {
+	height: 100%!important;
+}
+
+.type-android-textfield-password.type-android-textfield .faux-input:not(.placeholder-input), .type-android-textfield-password.type-android-textfield.box.current-component [data-editableProperty] textarea {
+	-webkit-text-security: disc;
+}
+
+
+/* TYPE = CHECKBOX */
+.type-android-checkbox label {
+	cursor: pointer;
+	display: block; width: 100%; height: 100%;
+	border: 1px solid black;
+}
+
+.type-android-checkbox label span {
+	display: none;
+	position: absolute; margin-top: -10%; width: 100%; text-align: center;
+	text-shadow: 0 0 2px black; 
+}
+
+.type-android-checkbox input:checked + label span {
+	display: block;
+}
+
+/* TYPE = RADIOBUTTON */
+.type-android-radiobutton label {
+	cursor: pointer;
+	display: block; width: 100%; height: 100%;
+	border: 1px solid black;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%;
+}
+
+.type-android-radiobutton label span {
+	display: none;
+	width: 80%; height: 80%;
+	box-shadow: 0 2px 2px 1px rgba(255, 255, 255, 0.4) inset;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-radiobutton input:checked + label span {
+	display: block;
+}
+
+/* TYPE = android-onoffswitch */
+.type-android-onoffswitch input {
+	display: none;
+}
+
+.type-android-onoffswitch label {
+	display: block; overflow: hidden;
+	height: 100%; position:relative;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-onoffswitch .onoffswitch-inner {
+	cursor: pointer;
+	display: block; width: 170%; height: 100%; position: relative;
+	margin-left: 0;
+	-moz-transition: margin 0.3s ease-in; -webkit-transition: margin 0.3s ease-in; transition: margin 0.3s ease-in;
+}
+
+.type-android-onoffswitch .onoffswitch-inner:after {
+	content: " ";
+	display: inline-block; height: 2px; width: 100%;
+	position: absolute; top: 0; left: 0;
+	background: rgba(0,0,0, 0.05);
+}
+
+.type-android-onoffswitch .activelabel, .type-android-onoffswitch .inactivelabel {
+	position: relative;
+	display: block; float: left; vertical-align: middle; width: 28%; height: 100%; text-align: center;
+}
+
+.type-android-onoffswitch .activelabel {
+	float: right;
+}
+
+.type-android-onoffswitch .inactivelabel .label-edge {
+	display: inline-block;
+	position: absolute; bottom: 0;
+	border-style: solid;
+	border-right-color: rgba(255, 255, 255, 0)!important;
+	border-bottom-color: rgba(255, 255, 255, 0)!important;
+}
+
+.type-android-onoffswitch .activelabel .label-edge {
+	display: inline-block;
+	position: absolute; bottom: 0;
+	border-style: solid;
+	border-left-color: rgba(255, 255, 255, 0)!important;
+	border-top-color: rgba(255, 255, 255, 0)!important;
+}
+
+.type-android-onoffswitch .inactivelabel:before {
+	content: " ";
+	position: absolute; bottom: -4px; left: 0;
+	display: inline-block; height: 2px; width: 100%;
+	background: red;
+}
+
+.type-android-onoffswitch .activelabel:before {
+	content: " ";
+	position: absolute; bottom: -4px; right: 0;
+	display: inline-block; height: 2px; width: 150%;
+	background: red;
+}
+
+.type-android-onoffswitch input:checked + label .onoffswitch-inner {
+	margin-left: -70%;
+}
+
+
+/***** LIST COMPONENTS *****/
+/* TYPE = LISTDIVIDER */
+.type-android-listdivider .inner {
+	height: 100%; padding: 0 10px;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* TYPE = LISTBASIC */
+
+.type-android-listbasic ul {
+	margin: 0; padding: 0; list-style: none;
+}
+.type-android-listbasic ul li {
+	position: relative;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;
+}
+
+.type-android-listbasic ul li:last-child {
+	border-bottom: 0 none!important;
+}
+
+.type-android-listbasic ul li input {
+	display: none;
+}
+
+.type-android-listbasic ul li label {
+	display: block; height: 100%;
+	padding: 0 10px;
+}
+
+/***** OTHER COMPONENTS *****/
+/* TYPE = TOAST */
+.type-android-toast .toast-inner {
+	width: 100%; height: 100%; text-align: center;
+}
